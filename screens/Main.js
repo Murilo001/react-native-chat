@@ -25,6 +25,7 @@ class Main extends Component {
 const offset = 24;
 const styles = StyleSheet.create({
   buttonText: {
+    marginTop: offset,
     marginLeft: offset,
     fontSize: offset
   }
