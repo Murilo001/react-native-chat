@@ -8,7 +8,7 @@
   "scripts": {
     "start": "expo start --localhost --android",
     "test": "jest",
-    "build android": "expo build:android"
+    "build:android": "expo build:android"
   },
   "jest": {
     "preset": "react-native",
