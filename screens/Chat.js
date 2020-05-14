@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { StyleSheet, Vibration, View, Platform } from 'react-native';
 
 import { Icon } from 'react-native-elements';
-import { GiftedChat, Bubble, Send } from 'react-native-gifted-chat';
+import { GiftedChat, Bubble, Send, MessageText } from 'react-native-gifted-chat';
 import { withTheme } from 'react-native-paper';
 
 import { Notifications } from 'expo';
 import * as Permissions from 'expo-permissions';
 import Constants from 'expo-constants';
+
+import 'moment/locale/pt-br';
 
 class Chat extends Component {
   constructor(props) {
@@ -119,7 +121,7 @@ class Chat extends Component {
     }));
 
     /* Mocando mensagem vinda do outro usuário */
-    const previousMessages = [{ 
+    const previousMessages = [{
       _id: `${Math.random()}`,
       createdAt: new Date(new Date(newMessage[newMessage.length - 1].createdAt)
         .setSeconds(
@@ -171,10 +173,21 @@ class Chat extends Component {
     return (
       <View style={{ flex: 1 }}>
         <GiftedChat
+          locale="pt-br"
           onSend={messages => this.onSend(messages)}
           messages={this.state.messages}
           renderBubble={this.renderBubble}
           renderSend={this.renderSend}
+          renderMessageText={ ({currentMessage, ...args}) => {
+                return (
+                <MessageText
+                  currentMessage={currentMessage}
+                  customTextStyle={{fontSize: 20, lineHeight: 20 }}
+                  {...args}
+                />
+              );
+            }
+          }
           placeholder="Digite uma mensagem..."
         />
       </View>
