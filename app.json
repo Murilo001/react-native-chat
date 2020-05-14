@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "basic-chat-starter",
-    "description": "The starter for our basic chat application",
+    "name": "Saude+",
+    "description": "Aplicação de rastreamento de câncer.",
     "slug": "snack-90a8ce69-0717-4b0c-a378-e666123da4da",
     "privacy": "unlisted",
     "version": "1.0.0",
     "orientation": "portrait",
     "primaryColor": "#cccccc",
-    "icon": "https://d1wp6m56sqw74a.cloudfront.net/~assets/c9aa1be8a6a6fe81e20c3ac4106a2ebc",
+    "icon": "./assets/icons/app-icon2.png",
     "loading": {
       "icon": "https://d1wp6m56sqw74a.cloudfront.net/~assets/c9aa1be8a6a6fe81e20c3ac4106a2ebc",
       "hideExponentText": false
